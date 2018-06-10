@@ -1,0 +1,3 @@
+/home/raxzers/CLionProjects/odysseyServer2.0/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/raxzers/CLionProjects/odysseyServer2.0/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/raxzers/CLionProjects/odysseyServer2.0/cmake-build-debug/CMakeFiles/odysseyServer2_0.dir

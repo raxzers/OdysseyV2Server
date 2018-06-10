@@ -1,0 +1,7 @@
+/home/raxzers/Downloads/CLion-2017.3.3/clion-2017.3.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/raxzers/CLionProjects/odysseyServer2.0
+-- Boost version: 1.62.0
+-- Found the following Boost libraries:
+--   system
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/raxzers/CLionProjects/odysseyServer2.0/cmake-build-debug
