@@ -123,6 +123,33 @@ odysseyServer2_0/fast:
 	$(MAKE) -f CMakeFiles/odysseyServer2_0.dir/build.make CMakeFiles/odysseyServer2_0.dir/build
 .PHONY : odysseyServer2_0/fast
 
+JSON/Query.o: JSON/Query.cpp.o
+
+.PHONY : JSON/Query.o
+
+# target to build an object file
+JSON/Query.cpp.o:
+	$(MAKE) -f CMakeFiles/odysseyServer2_0.dir/build.make CMakeFiles/odysseyServer2_0.dir/JSON/Query.cpp.o
+.PHONY : JSON/Query.cpp.o
+
+JSON/Query.i: JSON/Query.cpp.i
+
+.PHONY : JSON/Query.i
+
+# target to preprocess a source file
+JSON/Query.cpp.i:
+	$(MAKE) -f CMakeFiles/odysseyServer2_0.dir/build.make CMakeFiles/odysseyServer2_0.dir/JSON/Query.cpp.i
+.PHONY : JSON/Query.cpp.i
+
+JSON/Query.s: JSON/Query.cpp.s
+
+.PHONY : JSON/Query.s
+
+# target to generate assembly for a file
+JSON/Query.cpp.s:
+	$(MAKE) -f CMakeFiles/odysseyServer2_0.dir/build.make CMakeFiles/odysseyServer2_0.dir/JSON/Query.cpp.s
+.PHONY : JSON/Query.cpp.s
+
 RAID/MemoryController.o: RAID/MemoryController.cpp.o
 
 .PHONY : RAID/MemoryController.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... odysseyServer2_0"
+	@echo "... JSON/Query.o"
+	@echo "... JSON/Query.i"
+	@echo "... JSON/Query.s"
 	@echo "... RAID/MemoryController.o"
 	@echo "... RAID/MemoryController.i"
 	@echo "... RAID/MemoryController.s"

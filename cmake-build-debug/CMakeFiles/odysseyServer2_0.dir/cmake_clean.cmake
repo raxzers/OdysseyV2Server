@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/odysseyServer2_0.dir/main.cpp.o"
   "CMakeFiles/odysseyServer2_0.dir/RAID/MemoryController.cpp.o"
   "CMakeFiles/odysseyServer2_0.dir/base64.cpp.o"
+  "CMakeFiles/odysseyServer2_0.dir/JSON/Query.cpp.o"
   "odysseyServer2_0.pdb"
   "odysseyServer2_0"
 )

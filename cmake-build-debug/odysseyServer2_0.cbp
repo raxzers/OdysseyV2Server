@@ -84,6 +84,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/karina/Documentos/Odyssey2.0/DataStructures/Node.h">
+			<Option target="odysseyServer2_0"/>
+		</Unit>
+		<Unit filename="/home/karina/Documentos/Odyssey2.0/DataStructures/SimpleLinkedList.h">
+			<Option target="odysseyServer2_0"/>
+		</Unit>
+		<Unit filename="/home/karina/Documentos/Odyssey2.0/JSON/Query.cpp">
+			<Option target="odysseyServer2_0"/>
+		</Unit>
+		<Unit filename="/home/karina/Documentos/Odyssey2.0/JSON/Query.h">
+			<Option target="odysseyServer2_0"/>
+		</Unit>
 		<Unit filename="/home/karina/Documentos/Odyssey2.0/RAID/MemoryController.cpp">
 			<Option target="odysseyServer2_0"/>
 		</Unit>

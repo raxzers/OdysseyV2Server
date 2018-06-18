@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/karina/Documentos/Odyssey2.0/JSON/Query.cpp" "/home/karina/Documentos/Odyssey2.0/cmake-build-debug/CMakeFiles/odysseyServer2_0.dir/JSON/Query.cpp.o"
   "/home/karina/Documentos/Odyssey2.0/RAID/MemoryController.cpp" "/home/karina/Documentos/Odyssey2.0/cmake-build-debug/CMakeFiles/odysseyServer2_0.dir/RAID/MemoryController.cpp.o"
   "/home/karina/Documentos/Odyssey2.0/base64.cpp" "/home/karina/Documentos/Odyssey2.0/cmake-build-debug/CMakeFiles/odysseyServer2_0.dir/base64.cpp.o"
   "/home/karina/Documentos/Odyssey2.0/main.cpp" "/home/karina/Documentos/Odyssey2.0/cmake-build-debug/CMakeFiles/odysseyServer2_0.dir/main.cpp.o"
