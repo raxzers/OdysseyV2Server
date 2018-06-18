@@ -12,50 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dcf074-0a62-479b-ad0c-b5c76a844a32" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/DataStructures/Node.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataStructures/SimpleLinkedList.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/Query.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/Query.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/database.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/allocators.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/document.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/encodedstream.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/encodings.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/error/en.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/error/error.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/filereadstream.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/filewritestream.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/fwd.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/internal/biginteger.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/internal/diyfp.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/internal/dtoa.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/internal/ieee754.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/internal/itoa.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/internal/meta.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/internal/pow10.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/internal/regex.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/internal/stack.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/internal/strfunc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/internal/strtod.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/internal/swap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/istreamwrapper.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/memorybuffer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/memorystream.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/msinttypes/inttypes.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/msinttypes/stdint.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/ostreamwrapper.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/pointer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/prettywriter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/rapidjson.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/reader.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/schema.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/stream.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/stringbuffer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSON/rapidjson/writer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAID/MemoryController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/RAID/MemoryController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAID/MemoryController.h" beforeDir="false" afterPath="$PROJECT_DIR$/RAID/MemoryController.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/odysseyServer2_0.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/odysseyServer2_0.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/odysseyServer2_0.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/odysseyServer2_0.dir/DependInfo.cmake" afterDir="false" />
@@ -70,7 +27,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/odysseyServer2_0" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/odysseyServer2_0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/odysseyServer2_0.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/odysseyServer2_0.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -142,6 +98,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="karinsmguerrero &lt;karinamguerrero@estudiantec.cr&gt;" />
         <option value="karinamguerrero" />
       </list>
     </option>
@@ -253,16 +210,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529285632949</updated>
-      <workItem from="1529285634270" duration="9515000" />
+      <workItem from="1529285634270" duration="9988000" />
     </task>
+    <task id="LOCAL-00001" summary="raid 5 completo, la recuperacion no sirve si se elimina la carpeta, solo si se eliminan los archivos dentro de la carpeta">
+      <created>1529295399363</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1529295399363</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9515000" />
+    <option name="totallyTimeSpent" value="9988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-4" width="1311" height="772" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24942791" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -312,7 +276,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="raid 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="raid 5" />
+    <MESSAGE value="raid 5 completo, la recuperacion no sirve si se elimina la carpeta, solo si se eliminan los archivos dentro de la carpeta" />
+    <option name="LAST_COMMIT_MESSAGE" value="raid 5 completo, la recuperacion no sirve si se elimina la carpeta, solo si se eliminan los archivos dentro de la carpeta" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/JSON/rapidjson/filewritestream.h">
