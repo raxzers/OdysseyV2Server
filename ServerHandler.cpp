@@ -75,4 +75,6 @@ void ServerHandler::insertAlbum(Metadata* insert){
     sortedAlbums.insert(sortedAlbums.begin()+i,insert);
 }
 
+std::vector<std::string> ServerHandler::users(std::string);
+
 

@@ -15,10 +15,9 @@
 
     class ServerHandler {
     public:
-        /**
-         * estructura que almacena usuarios
-         */
-
+        /*admin tostado solo para pruebas*/
+        static const std::string superusuario= "bobby";
+        static const std::string superclave="KNO3+azucar";
 
         /**
          * path de la carpeta donde se almacenan las canciones
@@ -87,7 +86,7 @@
         static void insertAlbum(Metadata*);
 
         //static std::vector<Metadata*> searchAlbums(std::string);
-
+        static std::vector<std::string> users(std::string);
         /**
          * ordena la lista de canciones mediante quicksort
          */
