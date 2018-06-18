@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/raxzers/CLionProjects/odysseyServer2.0/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/karina/Documentos/Odyssey2.0/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_38d13/fast"
-/usr/bin/make -f CMakeFiles/cmTC_38d13.dir/build.make CMakeFiles/cmTC_38d13.dir/build
-make[1]: Entering directory '/home/raxzers/CLionProjects/odysseyServer2.0/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_38d13.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_38d13.dir/CheckSymbolExists.c.o   -c /home/raxzers/CLionProjects/odysseyServer2.0/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_38d13
-/home/raxzers/Downloads/CLion-2017.3.3/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38d13.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_38d13.dir/CheckSymbolExists.c.o  -o cmTC_38d13 
-CMakeFiles/cmTC_38d13.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+Run Build Command:"/usr/bin/make" "cmTC_83951/fast"
+/usr/bin/make -f CMakeFiles/cmTC_83951.dir/build.make CMakeFiles/cmTC_83951.dir/build
+make[1]: se entra en el directorio '/home/karina/Documentos/Odyssey2.0/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_83951.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_83951.dir/CheckSymbolExists.c.o   -c /home/karina/Documentos/Odyssey2.0/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_83951
+/home/karina/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.26/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_83951.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_83951.dir/CheckSymbolExists.c.o  -o cmTC_83951 
+CMakeFiles/cmTC_83951.dir/CheckSymbolExists.c.o: En la función `main':
+CheckSymbolExists.c:(.text+0x16): referencia a `pthread_create' sin definir
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_38d13.dir/build.make:97: recipe for target 'cmTC_38d13' failed
-make[1]: *** [cmTC_38d13] Error 1
-make[1]: Leaving directory '/home/raxzers/CLionProjects/odysseyServer2.0/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_38d13/fast' failed
-make: *** [cmTC_38d13/fast] Error 2
+CMakeFiles/cmTC_83951.dir/build.make:97: fallo en las instrucciones para el objetivo 'cmTC_83951'
+make[1]: *** [cmTC_83951] Error 1
+make[1]: se sale del directorio '/home/karina/Documentos/Odyssey2.0/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: fallo en las instrucciones para el objetivo 'cmTC_83951/fast'
+make: *** [cmTC_83951/fast] Error 2
 
-File /home/raxzers/CLionProjects/odysseyServer2.0/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/karina/Documentos/Odyssey2.0/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/raxzers/CLionProjects/odysseyServer2.0/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/karina/Documentos/Odyssey2.0/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_74e86/fast"
-/usr/bin/make -f CMakeFiles/cmTC_74e86.dir/build.make CMakeFiles/cmTC_74e86.dir/build
-make[1]: Entering directory '/home/raxzers/CLionProjects/odysseyServer2.0/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_74e86.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_74e86.dir/CheckFunctionExists.c.o   -c /home/raxzers/Downloads/CLion-2017.3.3/clion-2017.3.3/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
-Linking C executable cmTC_74e86
-/home/raxzers/Downloads/CLion-2017.3.3/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74e86.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_74e86.dir/CheckFunctionExists.c.o  -o cmTC_74e86 -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
+Run Build Command:"/usr/bin/make" "cmTC_368fd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_368fd.dir/build.make CMakeFiles/cmTC_368fd.dir/build
+make[1]: se entra en el directorio '/home/karina/Documentos/Odyssey2.0/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_368fd.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_368fd.dir/CheckFunctionExists.c.o   -c /home/karina/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.26/bin/cmake/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_368fd
+/home/karina/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.26/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_368fd.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_368fd.dir/CheckFunctionExists.c.o  -o cmTC_368fd -lpthreads 
+/usr/bin/ld: no se puede encontrar -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_74e86.dir/build.make:97: recipe for target 'cmTC_74e86' failed
-make[1]: *** [cmTC_74e86] Error 1
-make[1]: Leaving directory '/home/raxzers/CLionProjects/odysseyServer2.0/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_74e86/fast' failed
-make: *** [cmTC_74e86/fast] Error 2
+CMakeFiles/cmTC_368fd.dir/build.make:97: fallo en las instrucciones para el objetivo 'cmTC_368fd'
+make[1]: *** [cmTC_368fd] Error 1
+make[1]: se sale del directorio '/home/karina/Documentos/Odyssey2.0/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: fallo en las instrucciones para el objetivo 'cmTC_368fd/fast'
+make: *** [cmTC_368fd/fast] Error 2
 
 
