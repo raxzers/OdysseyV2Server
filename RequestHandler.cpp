@@ -123,7 +123,7 @@ boost::property_tree::ptree RequestHandler::handleRegistration(boost::property_t
     boost::property_tree::ptree response;
     response.put("error",false);
 
-    if(!ServerHandler::users->insert(newUser)){
+    if(!ServerHandler::users->insert(newUser)){//revisa si el usuario existe
         response.put("description","username already exists");
         response.put("status",false);
     }else{
@@ -323,7 +323,7 @@ boost::property_tree::ptree RequestHandler::handlePlay(boost::property_tree::ptr
         }
         else if(v.first == "chunk"){
             std::vector<Metadata*> songs;
-            songs = ServerHandler::songsNames->search(name);
+            songs = ServerHandler::songsNames->search(name);//busca la cancion
             for(Metadata* data :songs){
                 if(data->album == album && data->artist == artist /*&& data->genre == genre*/ && data->year == year){ //&& data->lyrics == lyrics
                     song = data;
@@ -529,8 +529,8 @@ boost::property_tree::ptree RequestHandler::handleDeletion(boost::property_tree:
     }
 
     ServerHandler::sortedAlbums.clear();
-    ServerHandler::songsArtists->empty();
-    ServerHandler::songsNames->empty();
+    //ServerHandler::songsArtists->empty();
+    //ServerHandler::songsNames->empty();
     ServerHandler::loadSetUp();
 
     responseXML.put("error",false);
@@ -603,7 +603,7 @@ boost::property_tree::ptree RequestHandler::handleChangeMetadata(boost::property
         }
     }
 
-    std::vector<Metadata*> songs = ServerHandler::songsNames->search(name);
+    std::vector<Metadata*> songs = ServerHandler::songsNames->search(name);//busca la cancion
     Metadata* song = nullptr;
     for(Metadata* data: songs){
         if(data->album == album && data->artist == artist){ //&& data->lyrics == lyrics
