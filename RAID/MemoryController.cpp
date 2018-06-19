@@ -12,47 +12,39 @@
 #include "../DataStructures/SimpleLinkedList.h"
 #include <malloc.h>
 
-void MemoryController::write(std::string data, int disk) {
+void MemoryController::write(std::string data, std::string path) {
     std::ofstream trackFile;
-    trackFile.open(trackPath + "Track9", std::ios::out);
+    trackFile.open(path, std::ios::out);
     std::string rawData = base64_decode(data);
     trackFile.write(rawData.data(), rawData.size());
     trackFile.close();
 }
 
-std::string MemoryController::read(int diskNum) {
+std::string MemoryController::read(std::string path, int size, int start) {
     std::fstream inFile;
-    inFile.open(trackPath + "Track1.mp3", std::ios::in | std::ios::binary);
-
-    int seek = 0;
-    int bytes = 0;
-
-    inFile.seekg(0, std::ios::end);
-    int size = inFile.tellg();
-    std::cout << "Size of file: " << size << std::endl;
-    inFile.seekg(0, std::ios::beg);
-
-
-    char *data = new char[(int)std::ceil((double)size/(double)4)];
-
-    bytes = (int)std::ceil((double)size/(double)4) - seek;
-    inFile.read(data, bytes);
+    inFile.open(path, std::ios::in | std::ios::binary);
+    inFile.seekg(start, std::ios::beg);
+    char *data = new char[size + 1];
+    inFile.read(data, size);
 
     inFile.close();
 
-    std::string strData(data, bytes);
-
-    unsigned char newData[strData.size()];
-    std::copy(strData.begin(), strData.end(), newData);
-    newData[strData.length()] = 0;
-
-    strData = base64_encode(newData, strData.size());
-
-
+    std::string strData = base64_encode((const unsigned char *)data, size);
     return strData;
 }
 
-void MemoryController::seek(std::string track) {
+std::string MemoryController::seek(std::string track, int pos) {
+    Query query;
+    long stripeSize = query.getStripeSize(track);
+    int pageToGet = (int) floor(pos / stripeSize);
+    int position = pos % stripeSize;
+    SimpleLinkedList<std::string> paths = query.getPath(track);
+    auto temp = paths.getHead();
+    for (int i = 0; i < pageToGet; i++) {
+        temp = temp->getNext();
+    }
+    std::string path = temp->getData();
+    return seek(path, position);
 
 }
 
@@ -64,8 +56,6 @@ void MemoryController::upload(std::string name, std::string pathToFile) {
     long size = inFile.tellg();
 
     long stripeSize = (long) (std::ceil((double) size / (double) 3));
-
-    std::cout << "file size: " << size << " stripe size: " << stripeSize << std::endl;
 
     char *stripe1 = (char *) malloc(sizeof(char) * size + 1);
 
@@ -87,7 +77,6 @@ void MemoryController::upload(std::string name, std::string pathToFile) {
         int disk = dist6(rng);
         std::string path = trackPath;
         path.append("Disk ");
-        std::cout << "path before mess: " << path << std::endl;
 
         if (available[disk]) {
             std::cout << "selected disk to upload: " << disk << std::endl;
@@ -107,11 +96,7 @@ void MemoryController::upload(std::string name, std::string pathToFile) {
                 newData[strData.length()] = 0;
                 strData = base64_encode(newData, strData.size());
 
-                trackFile.flush();
-                trackFile.open(path, std::ios::out | std::ios::binary);
-                rawData = base64_decode(strData);
-                trackFile.write(rawData.data(), rawData.size());
-                trackFile.close();
+                write(strData, path);
 
                 disksAvailable--;
                 stripesWriten[disk] = 1;
@@ -129,11 +114,7 @@ void MemoryController::upload(std::string name, std::string pathToFile) {
                 newData2[strData.length()] = 0;
                 strData = base64_encode(newData2, strData.size());
 
-                trackFile.flush();
-                trackFile.open(path, std::ios::out | std::ios::binary);
-                rawData = base64_decode(strData);
-                trackFile.write(rawData.data(), rawData.size());
-                trackFile.close();
+                write(strData, path);
 
                 disksAvailable--;
                 stripesWriten[disk] = 2;
@@ -150,10 +131,8 @@ void MemoryController::upload(std::string name, std::string pathToFile) {
                 std::copy(strData.begin(), strData.end(), newData3);
                 newData3[strData.length()] = 0;
                 strData = base64_encode(newData3, strData.size());
-                trackFile.open(path, std::ios::out | std::ios::binary);
-                rawData = base64_decode(strData);
-                trackFile.write(rawData.data(), rawData.size());
-                trackFile.close();
+
+                write(strData, path);
 
                 disksAvailable--;
                 stripesWriten[disk] = 3;
@@ -171,10 +150,9 @@ void MemoryController::upload(std::string name, std::string pathToFile) {
                 std::copy(strData.begin(), strData.end(), newData4);
                 newData4[strData.length()] = 0;
                 strData = base64_encode(newData4, strData.size());
-                trackFile.open(path, std::ios::out | std::ios::binary);
-                rawData = base64_decode(strData);
-                trackFile.write(rawData.data(), rawData.size());
-                trackFile.close();
+
+
+                write(strData, path);
 
                 disksAvailable--;
                 stripesWriten[disk] = 4;
@@ -182,10 +160,11 @@ void MemoryController::upload(std::string name, std::string pathToFile) {
                 paths[3] = path;
             }
 
+
         }
     }
     Query query;
-    query.addTrack(paths[0], paths[1], paths[2], paths[3], name);
+    query.addTrack(paths[0], paths[1], paths[2], paths[3], name, stripeSize);
 }
 
 char *MemoryController::getParity(char *stripe1, char *stripe2, char *stripe3, int size) {
@@ -280,11 +259,7 @@ void MemoryController::checkFile(std::string name) {
         newData[strData.length()] = 0;
         strData = base64_encode(newData, strData.size());
 
-        trackFile.flush();
-        trackFile.open(stripe1path, std::ios::out | std::ios::binary);
-        rawData = base64_decode(strData);
-        trackFile.write(rawData.data(), rawData.size());
-        trackFile.close();
+        write(strData, stripe1path);
 
     }else if(!available[1]){
 
@@ -297,11 +272,7 @@ void MemoryController::checkFile(std::string name) {
         newData[strData.length()] = 0;
         strData = base64_encode(newData, strData.size());
 
-        trackFile.flush();
-        trackFile.open(stripe2path, std::ios::out | std::ios::binary);
-        rawData = base64_decode(strData);
-        trackFile.write(rawData.data(), rawData.size());
-        trackFile.close();
+        write(strData, stripe2path);
 
     }else if(!available[2]){
 
@@ -314,11 +285,7 @@ void MemoryController::checkFile(std::string name) {
         newData[strData.length()] = 0;
         strData = base64_encode(newData, strData.size());
 
-        trackFile.flush();
-        trackFile.open(stripe3path, std::ios::out | std::ios::binary);
-        rawData = base64_decode(strData);
-        trackFile.write(rawData.data(), rawData.size());
-        trackFile.close();
+        write(strData, stripe3path);
 
     } else if(!available[3]){
         for (int i = 0; i < fileSize; i++) {
@@ -330,15 +297,7 @@ void MemoryController::checkFile(std::string name) {
         newData[strData.length()] = 0;
         strData = base64_encode(newData, strData.size());
 
-        trackFile.flush();
-        trackFile.open(stripeParityPath, std::ios::out | std::ios::binary);
-        rawData = base64_decode(strData);
-        trackFile.write(rawData.data(), rawData.size());
-        trackFile.close();
+        write(strData, stripeParityPath);
 
     }
-
-
-
-
 }

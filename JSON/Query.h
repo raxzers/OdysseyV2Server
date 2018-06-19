@@ -30,9 +30,11 @@ public:
     void addNewUser(Userdata userdata);
     void addNewTrack(Metadata metadata);*/
 
-    void addTrack(std::string str1path, std::string str2path, std::string str3path, std::string paritypath, std::string name);
+    void addTrack(std::string str1path, std::string str2path,
+                  std::string str3path, std::string paritypath, std::string name, long stripe);
     void deleteTrack(std::string name);
     SimpleLinkedList<std::string> getPath(std::string name);
+    long getStripeSize(std::string name);
 
 private:
 const std::string MAP_PATH="/home/karina/Escritorio/Tracks/DriveMap.json";

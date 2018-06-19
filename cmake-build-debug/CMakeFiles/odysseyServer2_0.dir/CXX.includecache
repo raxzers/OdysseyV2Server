@@ -309,6 +309,8 @@ string
 /home/karina/Documentos/Odyssey2.0/main.cpp
 iostream
 -
+cmath
+-
 RAID/MemoryController.h
 /home/karina/Documentos/Odyssey2.0/RAID/MemoryController.h
 JSON/Query.h

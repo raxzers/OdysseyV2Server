@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 #include "RAID/MemoryController.h"
 #include "JSON/Query.h"
@@ -13,6 +14,8 @@ int main() {
     ioservice.run();
     return 0;*/
     MemoryController raid;
-    //raid.upload("test","/home/karina/Escritorio/Tracks/sample.mp3");
-    raid.checkFile("test");
+    //raid.upload("prueba","/home/karina/Escritorio/Tracks/sample.mp3");
+    //raid.checkFile("test");
+    //raid.seek("prueba", 242254);
+
 }

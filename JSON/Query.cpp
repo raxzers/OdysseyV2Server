@@ -415,7 +415,7 @@ void Query::deleteTrack(std::string name) {
 
 }
 
-void Query::addTrack(std::string str1path, std::string str2path, std::string str3path, std::string paritypath, std::string name) {
+void Query::addTrack(std::string str1path, std::string str2path, std::string str3path, std::string paritypath, std::string name, long stripeSize) {
     FILE *fp = fopen(MAP_PATH.c_str(), "r"); // non-Windows use "r"
     char readBuffer[65536];
     FileReadStream is(fp, readBuffer, sizeof(readBuffer));
@@ -449,6 +449,9 @@ void Query::addTrack(std::string str1path, std::string str2path, std::string str
         textPart.SetString(paritypath.c_str(), allocator);
         object.AddMember("parity",textPart , allocator);
     }
+
+    object.AddMember("size",stripeSize , allocator);
+
     d["tracks"].PushBack(object, allocator);
 
 
@@ -459,4 +462,26 @@ void Query::addTrack(std::string str1path, std::string str2path, std::string str
     PrettyWriter<FileWriteStream> writer(os);
     d.Accept(writer);
     fclose(fp2);
+}
+
+long Query::getStripeSize(std::string name) {
+    FILE* fp = fopen(MAP_PATH.c_str(), "r"); // non-Windows use "r"
+    char readBuffer[65536];
+    FileReadStream is(fp, readBuffer, sizeof(readBuffer));
+    Document d;
+    d.ParseStream(is);
+    fclose(fp);
+    long size;
+    int numberOfTracks = d["tracks"].Size();
+
+    for (int h = 0; h < numberOfTracks; h++) {
+
+        if (d["tracks"][h]["name"].GetString() == name) {
+
+            size = (long)d["tracks"][h]["size"].GetInt();
+
+        }
+    }
+
+    return size;
 }
